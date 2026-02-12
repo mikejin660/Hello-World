@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Book Exchange - BookSwap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { background-color: #fdfcf0; }
+        .book-card { margin-bottom: 20px; transition: transform 0.2s; }
+        .book-card:hover { transform: scale(1.02); }
+        /* Placeholder for gracefully handling server disconnection [cite: 37-42, 198] */
+        #disconnect-msg { display: none; } 
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="#">BookSwap</a>
+            <div class="navbar-nav">
+                <a class="nav-link active" href="#">Browse Books</a>
+                <a class="nav-link" href="#">Post a Book</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <div id="disconnect-msg" class="alert alert-danger" role="alert">
+            Server connection lost. Please wait while we try to reconnect...
+        </div>
+
+        <div class="row mb-4">
+            <div class="col">
+                <h2>Books You Might Like</h2>
+                <p class="text-muted">Static Mockup: Demonstrating Book entities linked to User IDs.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card book-card shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">Professional JavaScript</h5>
+                        <p class="card-text text-secondary">Author: Nicholas C. Zakas</p>
+                        <hr>
+                        <p class="small">Posted by: <strong>Student Zhang (ID: 101)</strong></p>
+                        <button class="btn btn-outline-primary btn-sm">View Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card book-card shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">Introduction to Algorithms</h5>
+                        <p class="card-text text-secondary">Author: Thomas H. Cormen</p>
+                        <hr>
+                        <p class="small">Posted by: <strong>Student Li (ID: 102)</strong></p>
+                        <button class="btn btn-outline-primary btn-sm">View Details</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-md-6">
+                <div class="p-4 border rounded bg-white shadow-sm">
+                    <h4>Post a New Book</h4>
+                    <form>
+                        <div class="mb-3">
+                            <label class="form-label">Book Title</label>
+                            <input type="text" class="form-control" placeholder="Enter book title">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Author</label>
+                            <input type="text" class="form-control" placeholder="Enter author name">
+                        </div>
+                        <button type="button" class="btn btn-success">Submit (Mockup Only)</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center mt-5 py-3 text-muted border-top">
+        <small>© 2026 COMP1111 Programming (Gold) - Formative Assignment Case</small>
+    </footer>
+
+</body>
+</html>
